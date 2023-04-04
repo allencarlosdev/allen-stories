@@ -13,7 +13,7 @@
       />
       <div class="btn">
         <button class="btn__stories">
-          <RouterLink to="/stories"> Stories</RouterLink>
+          <RouterLink to="/stories">Stories</RouterLink>
         </button>
       </div>
     </div>

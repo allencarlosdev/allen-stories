@@ -1,11 +1,14 @@
 <template>
   <div class="container-stories">
-    <h1>STORY</h1>
+    <StoriesListComponent />
   </div>
 </template>
 <script>
+import StoriesListComponent from '../components/StoriesListComponent.vue'
+
 export default {
   name: 'StoriesView',
+  components: { StoriesListComponent },
 }
 </script>
 <style scoped>
