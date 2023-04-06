@@ -18,4 +18,10 @@ import FooterComponent from './components/FooterComponent.vue'
   flex-direction: column;
   min-height: 100vh;
 }
+
+@media screen and (max-width: 1000px) {
+  .container {
+    min-height: auto;
+  }
+}
 </style>

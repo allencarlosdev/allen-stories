@@ -85,7 +85,7 @@ export default {
 }
 
 .image__border {
-  width: 50%;
+  width: 70%;
   height: 90%;
   background-color: blue;
   background-image: v-bind(image);
@@ -93,5 +93,45 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 1rem;
+}
+
+/* Responsive design */
+@media screen and (max-width: 1700px) {
+  .container-story {
+    flex-direction: column;
+    height: 250vh;
+  }
+
+  .book {
+    width: 100%;
+  }
+  .book__p {
+    margin: 0 2rem;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .image {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .book__border {
+    border: 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container-story {
+    height: auto;
+  }
+
+  .book {
+    height: auto;
+  }
+  .image {
+    height: 30rem;
+  }
 }
 </style>

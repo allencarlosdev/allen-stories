@@ -98,4 +98,18 @@ export default {
   transition: 0.5s;
   cursor: pointer;
 }
+
+@media screen and (max-width: 900px) {
+  .list__ul {
+    grid-template-columns: repeat(2, minmax(min(10rem, 100%), 1fr));
+    grid-auto-rows: 2fr;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .list__ul {
+    grid-template-columns: repeat(1, minmax(min(10rem, 100%), 1fr));
+    grid-auto-rows: auto;
+  }
+}
 </style>

@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <p>
+    <p class="footer__p">
       Programmed by:
       <a
         class="footer__a"
@@ -23,7 +23,6 @@ footer {
   background-color: var(--background-footer);
   width: 100%;
   height: 10vh;
-  margin-top: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,5 +31,12 @@ footer {
 }
 .footer__a {
   color: var(--letter-link);
+}
+
+@media screen and (max-width: 600px) {
+  .footer__p {
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>
