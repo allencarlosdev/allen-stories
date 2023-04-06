@@ -1,22 +1,17 @@
 <template>
   <div class="list">
     <ul class="list__ul">
-      <li class="list__li">
-        <RouterLink class="list__card" to="/story1">
-          <img class="list__img" src="img/test1.png" alt="image 1" />
-          <h3 class="list__title">test 1</h3>
-        </RouterLink>
-      </li>
-      <li class="list__li">
-        <RouterLink class="list__card" to="/story2">
-          <img class="list__img" src="img/test2.png" alt="image 1" />
-          <h3 class="list__title">test 1</h3>
-        </RouterLink>
-      </li>
-      <li class="list__li">
-        <RouterLink class="list__card" to="/story3">
-          <img class="list__img" src="img/test3.png" alt="image 1" />
-          <h3 class="list__title">test 1</h3>
+      <li class="list__li" v-for="story in stories" :key="story.id">
+        <RouterLink
+          class="list__card"
+          :to="{
+            name: 'StoryView',
+            params: { id: story.id },
+          }"
+          name="carlos"
+        >
+          <img class="list__img" :src="story.url" alt="image 1" />
+          <h3 class="list__title">{{ story.title }}</h3>
         </RouterLink>
       </li>
     </ul>
@@ -25,6 +20,22 @@
 <script>
 export default {
   name: 'StoriesListComponent',
+  data() {
+    return {
+      stories: [],
+    }
+  },
+  async created() {
+    const response = await fetch(
+      'https://api-allen-stories.000webhostapp.com/api/stories',
+    )
+    if (response.ok) {
+      const storiesData = await response.json()
+      this.stories = storiesData
+    } else {
+      alert('Error HTTP' + response.status)
+    }
+  },
 }
 </script>
 <style scoped>

@@ -15,7 +15,7 @@ const routes = [
     component: StoriesView,
   },
   {
-    path: '/story1',
+    path: '/stories/:id',
     name: 'StoryView',
     component: StoryView,
   },

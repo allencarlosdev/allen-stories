@@ -13,7 +13,6 @@ export default {
 </script>
 <style scoped>
 .container-stories {
-  background-color: beige;
   height: 80vh;
 }
 </style>
