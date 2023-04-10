@@ -29,7 +29,7 @@ export default {
 .image {
   width: 100%;
   height: 80vh;
-  background-image: url('img/background-stories-allen.svg');
+  background-image: url('../assets/img/background-stories-allen.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
