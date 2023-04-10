@@ -26,7 +26,6 @@ export default {
 </script>
 <style scoped>
 /* image */
-
 .image {
   width: 100%;
   height: 80vh;

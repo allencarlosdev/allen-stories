@@ -1,6 +1,6 @@
 <template>
   <div class="container-stories">
-    <StoriesListComponent />
+    <StoriesListComponent class="stories" />
   </div>
 </template>
 <script>
